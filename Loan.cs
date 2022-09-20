@@ -29,12 +29,22 @@
 
 
 
-public class Book : Document
-{
-    private int Pages { get; set; }
+using System;
+using System.Reflection.Metadata;
+using System.Xml.Linq;
 
-    public Book(string isbn, int pages, string title, int year, string genre, bool available, string shelf, string author) : base(isbn, title, year, genre, available, shelf, author)
+public class Loan
+{
+    public string StartDate { get; set; }
+    public string EndDate { get; set; }
+    public User Utente { get; set; }
+    public Document Documento { get; set; }
+
+    public Loan(string startDate, string endDate, User utente, Document documento)
     {
-        Pages = pages;
+        StartDate = startDate;
+        EndDate = endDate;
+        Utente = utente;
+        Documento = documento;
     }
 }

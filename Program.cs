@@ -22,25 +22,35 @@
 //Deve essere possibile effettuare la ricerca dei prestiti dato nome e cognome di un utente.
 
 List<User> registeredUser = new List<User>();
-
 //utenti registrati
 registeredUser.Add(new User("Prova", "Rossi", "rossi@gmail.com", "12345a", "3331112233"));
 registeredUser.Add(new User("Prova", "Gialli", "gialli@gmail.com", "12345b", "3332221133"));
 registeredUser.Add(new User("Prova", "Verdi", "verdi@gmail.com", "12345c", "3333332211"));
 
-Console.Write("Inserisci il tuo nome: ");
-string name = Console.ReadLine();
+List<Dvd> dvds = new List<Dvd>();
+dvds.Add(new Dvd("1234", 100, "Harry Potter", 2002, "Fantasy", true, "12A", "J.K. Rowling"));
 
-Console.Write("Inserisci il tuo cognome: ");
-string surname = Console.ReadLine();
+foreach (Dvd dvd in dvds)
+{
+    Console.WriteLine(dvd.Time);
+}
 
-Console.Write("Inserisci la tua email: ");
-string email = Console.ReadLine();
+List<Book> books = new List<Book>();
+books.Add(new Book("123-45678", 100, "Harry Potter", 2022, "Fantasy", false, "F20", "J.K.Rowling"));
 
-Console.Write("Inserisci una nuova password: ");
-string password = Console.ReadLine();
+//Console.Write("Inserisci il tuo nome: ");
+//string name = Console.ReadLine();
 
-Console.Write("Inserisci il tuo recapito telefonico: ");
-string phone = Console.ReadLine();
+//Console.Write("Inserisci il tuo cognome: ");
+//string surname = Console.ReadLine();
 
-User newUser = new User(name, surname, email, password, phone);
+//Console.Write("Inserisci la tua email: ");
+//string email = Console.ReadLine();
+
+//Console.Write("Inserisci una nuova password: ");
+//string password = Console.ReadLine();
+
+//Console.Write("Inserisci il tuo recapito telefonico: ");
+//string phone = Console.ReadLine();
+
+//User newUser = new User(name, surname, email, password, phone);

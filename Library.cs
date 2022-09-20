@@ -34,4 +34,23 @@ public class Library
     private string name { get; set; }
     private List<Book> books { get; set; }
     private List<Dvd> dvds  { get; set; }
+
+    public Document GetDocument(string value)
+    {
+        foreach (Dvd dvd in dvds)
+        {
+            if (dvd.IdCode == value || dvd.Title == value)
+            {
+                return dvd;
+            }
+        }
+        foreach (Book book in books)
+        {
+            if (book.IdCode == value || book.Title == value)
+            {
+                return book;
+            }
+        }
+        return new Document();
+    }
 }
