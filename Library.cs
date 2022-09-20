@@ -24,22 +24,14 @@
 
 //utenti registrati
 
-public class Document
-{
-    protected string Title { get; set; }
-    protected int Year { get; set; }
-    protected string Genre { get; set; }
-    protected bool Available { get; set; }
-    protected string Shelf { get; set; }
-    protected string Author { get; set; }
 
-    public Document(string title, int year, string genre, bool available, string shelf, string author)
-    {
-        Title = title;
-        Year = year;
-        Genre = genre;
-        Available = available;
-        Shelf = shelf;
-        Author = author;
-    }
+
+
+
+
+public class Library
+{
+    private string name { get; set; }
+    private List<Book> books { get; set; }
+    private List<Dvd> dvds  { get; set; }
 }

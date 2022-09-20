@@ -21,18 +21,18 @@
 
 public class User
 {
-    private string name;
-    private string surname;
-    private string email;
-    private string password;
-    private string phone;
+    private string Name { get; set; }
+    private string Surname { get; set; }
+    private string Email { get; set; }
+    private string Password { get; set; }
+    private string Phone { get; set; }
 
     public User(string name, string surname, string email, string password, string phone)
     {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
+        Name = name;
+        Surname = surname;
+        Email = email;
+        Password = password;
+        Phone = phone;
     }
 }
