@@ -21,26 +21,25 @@
 //effettuare dei prestiti registrando il periodo (Dal/Al) del prestito e il documento.
 //Deve essere possibile effettuare la ricerca dei prestiti dato nome e cognome di un utente.
 
-List<User> registeredUser = new List<User>();
 
 //utenti registrati
-registeredUser.Add(new User("Prova", "Rossi", "rossi@gmail.com", "12345a", "3331112233"));
-registeredUser.Add(new User("Prova", "Gialli", "gialli@gmail.com", "12345b", "3332221133"));
-registeredUser.Add(new User("Prova", "Verdi", "verdi@gmail.com", "12345c", "3333332211"));
 
-Console.Write("Inserisci il tuo nome: ");
-string name = Console.ReadLine();
+public class Document
+{
+    protected string title;
+    protected int year;
+    protected string genre;
+    protected bool available;
+    protected string shelf;
+    protected string author;
 
-Console.Write("Inserisci il tuo cognome: ");
-string surname = Console.ReadLine();
-
-Console.Write("Inserisci la tua email: ");
-string email = Console.ReadLine();
-
-Console.Write("Inserisci una nuova password: ");
-string password = Console.ReadLine();
-
-Console.Write("Inserisci il tuo recapito telefonico: ");
-string phone = Console.ReadLine();
-
-User newUser = new User(name, surname, email, password, phone);
+    public Document(string title, int year, string genre, bool available, string shelf, string author)
+    {
+        this.title = title;
+        this.year = year;
+        this.genre = genre;
+        this.available = available;
+        this.shelf = shelf;
+        this.author = author;
+    }
+}
