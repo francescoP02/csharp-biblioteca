@@ -21,8 +21,8 @@
 
 public class User
 {
-    private string Name { get; set; }
-    private string Surname { get; set; }
+    public string Name { get; set; }
+    public string Surname { get; set; }
     private string Email { get; set; }
     private string Password { get; set; }
     private string Phone { get; set; }
