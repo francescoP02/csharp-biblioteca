@@ -27,9 +27,7 @@
 
 
 
-
-
-class Dvd : Document
+public class Dvd : Document
 {
     public string SerialNumber { get; set; }
     public int Time { get; set; }

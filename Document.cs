@@ -26,12 +26,12 @@
 
 public class Document
 {
-    protected string Title { get; set; }
-    protected int Year { get; set; }
-    protected string Genre { get; set; }
-    protected bool Available { get; set; }
-    protected string Shelf { get; set; }
-    protected string Author { get; set; }
+    public string Title { get; set; }
+    public int Year { get; set; }
+    public string Genre { get; set; }
+    public bool Available { get; set; }
+    public string Shelf { get; set; }
+    public string Author { get; set; }
 
     public Document(string title, int year, string genre, bool available, string shelf, string author)
     {

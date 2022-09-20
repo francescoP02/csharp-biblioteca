@@ -22,21 +22,55 @@
 //Deve essere possibile effettuare la ricerca dei prestiti dato nome e cognome di un utente.
 
 List<User> registeredUser = new List<User>();
-//utenti registrati
-registeredUser.Add(new User("Prova", "Rossi", "rossi@gmail.com", "12345a", "3331112233"));
-registeredUser.Add(new User("Prova", "Gialli", "gialli@gmail.com", "12345b", "3332221133"));
-registeredUser.Add(new User("Prova", "Verdi", "verdi@gmail.com", "12345c", "3333332211"));
+List<Document> documents = new List<Document>();
+List<Loan> loans = new List<Loan>();
 
-List<Dvd> dvds = new List<Dvd>();
-dvds.Add(new Dvd("1234", 100, "Harry Potter", 2002, "Fantasy", true, "12A", "J.K. Rowling"));
+bool success = false;
+string choice;
 
-foreach (Dvd dvd in dvds)
+do
 {
-    Console.WriteLine(dvd.Time);
+    Console.WriteLine("Cosa vuoi fare?");
+    Console.WriteLine("'aggiungi' per aggiungere un documento, 'noleggia' per noleggiare un documento");
+    Console.WriteLine("'cerca' per inserire un documento, 'esci' per terminare");
+    choice = Console.ReadLine();
+
+    if (choice == "aggiungi")
+    {
+        InsertDocument();
+    } else if (choice == "noleggia") {
+        RequireLoan();
+    } else if (choice == "cerca")
+    {
+        SearchLoan();
+    }
+
+} while (choice != "esci");
+
+void InsertDocument()
+{
+    Console.WriteLine("inserisci");
 }
 
-List<Book> books = new List<Book>();
-books.Add(new Book("123-45678", 100, "Harry Potter", 2022, "Fantasy", false, "F20", "J.K.Rowling"));
+void RequireLoan()
+{
+    Console.WriteLine("noleggia");
+}
+
+void SearchLoan()
+{
+    Console.WriteLine("cerca");
+}
+
+
+////utenti registrati
+//registeredUser.Add(new User("Prova", "Rossi", "rossi@gmail.com", "12345a", "3331112233"));
+//registeredUser.Add(new User("Prova", "Gialli", "gialli@gmail.com", "12345b", "3332221133"));
+//registeredUser.Add(new User("Prova", "Verdi", "verdi@gmail.com", "12345c", "3333332211"));
+
+//List<Dvd> dvds = new List<Dvd>();
+
+//List<Book> books = new List<Book>();
 
 //Console.Write("Inserisci il tuo nome: ");
 //string name = Console.ReadLine();
